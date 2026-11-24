@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { DelayTimeline } from '@/components/delay-timeline'
 import { Faq } from '@/components/faq'
 import { Hero } from '@/components/hero'
@@ -17,7 +18,12 @@ export default function Page() {
           <span className="font-display text-xl uppercase tracking-wide">
             VI<span className="text-primary">PC</span>Watch
           </span>
-          <span className="font-mono text-xs text-muted-foreground">Updated {updated}</span>
+          <div className="flex items-center gap-4">
+            <span className="hidden font-mono text-xs text-muted-foreground sm:inline">Updated {updated}</span>
+            <Link href="/about" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              About
+            </Link>
+          </div>
         </div>
       </header>
       <main>
